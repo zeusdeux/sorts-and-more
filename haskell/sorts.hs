@@ -75,6 +75,7 @@ swap :: Eq a => a -> [a] -> [a]
 swap x [] = [x]
 swap a (x:ys) = a:[if y == a then x else y | y <- ys]
 
+-- recursion seems ugly. need to fix this
 swapAlt :: Eq a => a -> [a] -> [a]
 swapAlt x [] = [x]
 swapAlt a (x:y:xs)
